@@ -15,7 +15,7 @@ import java.math.BigDecimal;
 @Data
 public class SavingAccountController {
     SavingAccountService savingAccountService = new SavingAccountService();
-    public void withdrawal() {
+    public void withdraw() {
         savingAccountService.withdraw();
     }
 

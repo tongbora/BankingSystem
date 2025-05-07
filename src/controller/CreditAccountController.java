@@ -20,4 +20,7 @@ public class CreditAccountController {
     public void showBalance() {
         creditAccountService.showBalance();
     }
+    public void createAccount() {
+        creditAccountService.createAccount();
+    }
 }
