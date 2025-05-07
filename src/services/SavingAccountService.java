@@ -14,17 +14,25 @@ public class SavingAccountService implements AccountService {
     BigDecimal amount;
 
     public void createAccount(){
-        System.out.println("Enter account id: ");
+        System.out.print("Enter account id: ");
         Integer id = scanner.nextInt();
         scanner.nextLine();
-        System.out.println("Enter username: ");
+        System.out.print("Enter username: ");
         String username = scanner.nextLine();
         while (true){
-            System.out.println("Enter pin code (4 digits): ");
-            Integer pin = scanner.nextInt();
-            if(pin.intValue() == 4){
+            System.out.println("Enter pin code (4 digits)");
+            System.out.print("Enter pin code 1: ");
+            char pin1 = scanner.next().charAt(0);
+            System.out.print("Enter pin code 2: ");
+            char pin2 = scanner.next().charAt(0);
+            System.out.print("Enter pin code 3: ");
+            char pin3 = scanner.next().charAt(0);
+            System.out.print("Enter pin code 4: ");
+            char pin4 = scanner.next().charAt(0);
+            char[] pins = {pin1, pin2, pin3, pin4};
+            if(pins.length == 4){
                 scanner.nextLine();
-                savingAccount = new SavingAccount(1, UUID.randomUUID().toString(), BigDecimal.ZERO, username,pin, LocalDateTime.now(),LocalDateTime.now());
+                savingAccount = new SavingAccount(1, UUID.randomUUID().toString(), BigDecimal.ZERO, username,pins, LocalDateTime.now(),LocalDateTime.now());
                 System.out.println("Saving account created.");
                 break;
             }
@@ -36,12 +44,12 @@ public class SavingAccountService implements AccountService {
     @Override
     public void withdraw() {
         while (true) {
-            System.out.println("[+] Insert amount to withdraw: ");
+            System.out.print("[+] Insert amount to withdraw: ");
             amount = scanner.nextBigDecimal();
             if (amount.compareTo(BigDecimal.ZERO) <= 0 || amount.compareTo(savingAccount.getBalance()) > 0 ) {
                 System.out.println("[+] Amount must be greater than or equal to zero and must be less than or equal to your current balance.");
                 scanner.nextLine();
-                System.out.println("Would you like to continue? (y/n): ");
+                System.out.print("Would you like to continue? (y/n): ");
                 String response = scanner.nextLine().toLowerCase();
                 if (response.equals("n")) {
                     break;

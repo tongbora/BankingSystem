@@ -21,7 +21,7 @@ public class AccountView {
                 2.CREDIT ACCOUNT
                 3.Exist
                 """);
-        System.out.println("[+] Please choose the account type to create a new account: ");
+        System.out.print("[+] Please choose the account type to create a new account: ");
         int choice = scanner.nextInt();
         switch (choice){
             case 1 -> {
@@ -33,7 +33,7 @@ public class AccountView {
                             3. SHOW BALANCE
                             4. EXIT
                             """);
-                    System.out.println("[+] Enter your choice: ");
+                    System.out.print("[+] Enter your choice: ");
                     choice = scanner.nextInt();
                     switch (choice){
                         case 1 -> {
@@ -48,7 +48,7 @@ public class AccountView {
                         case 4 -> {
                             String goodbye = "Goodbye!";
                             for(char ch : goodbye.toCharArray()){
-                                Thread.sleep(400);
+                                Thread.sleep(300);
                                 System.out.print(ch);
                             }
                             return;
@@ -65,7 +65,7 @@ public class AccountView {
                             3. SHOW BALANCE
                             4. EXIT
                             """);
-                    System.out.println("[+] Enter your choice: ");
+                    System.out.print("[+] Enter your choice: ");
                     choice = scanner.nextInt();
                     switch (choice){
                         case 1 -> {
@@ -80,7 +80,7 @@ public class AccountView {
                         case 4 -> {
                             String goodbye = "Goodbye!";
                             for(char ch : goodbye.toCharArray()){
-                                Thread.sleep(400);
+                                Thread.sleep(300);
                                 System.out.print(ch);
                             }
                             return;
@@ -91,7 +91,7 @@ public class AccountView {
             case 3 -> {
                 String goodbye = "Goodbye!";
                 for(char ch : goodbye.toCharArray()){
-                    Thread.sleep(400);
+                    Thread.sleep(300);
                     System.out.print(ch);
                 }
                 return;

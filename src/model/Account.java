@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.lang.reflect.Array;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
@@ -17,7 +18,7 @@ public class Account {
     private String uuid;
     private BigDecimal balance;
     private String username;
-    private Integer pin;
+    private char[] pin;
     private LocalDateTime createdAt;
     private LocalDateTime expiresAt;
 }
