@@ -1,14 +1,7 @@
 package view;
-
 import controller.CreditAccountController;
 import controller.SavingAccountController;
-import model.SavingAccount;
-
-import java.math.BigDecimal;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.Scanner;
-import java.util.UUID;
 
 public class AccountView {
     CreditAccountController creditAccountController = new CreditAccountController();

@@ -5,7 +5,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import services.CreditAccountService;
-@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
